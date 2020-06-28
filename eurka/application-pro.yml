@@ -1,8 +1,13 @@
-# 设置spring应用命名，可以自定义，非必要
-spring.application.name=eureka-server
-  # 本地为8888
-server.port=8888
-  #是否将自己注册到Eureka-Server中，默认的为true
-eureka.client.registerWithEureka=false
-  #是否从Eureka-Server中获取服务注册信息，默认为true
-eureka.client.fetchRegistry=false
+server:
+  port: 8002
+
+spring:
+  application:
+    # 应用名称
+    name: eureka-server
+eureka:
+  client:
+  register-with-eureka: false #false表示不向注册中心注册自己。
+  fetch-registry: false #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+  service-url:
+    defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
