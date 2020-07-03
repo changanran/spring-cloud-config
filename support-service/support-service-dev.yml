@@ -2,7 +2,7 @@ spring:
   application:
     name: support-service
 server:
-  port: 7081
+  port: 7087
 eureka:
   client:
     serviceUrl:
