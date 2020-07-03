@@ -3,6 +3,7 @@ spring:
     name: support-service
 server:
   port: 7087
+  context-path: /support-service
 eureka:
   client:
     serviceUrl:
